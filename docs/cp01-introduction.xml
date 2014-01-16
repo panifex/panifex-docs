@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Panifex platform
+  Copyright (C) 2013  Mario Krizmanic
+  
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or any later version.
+  
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+<chapter version="5.0"
+        xmlns="http://docbook.org/ns/docbook"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="
+        http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd
+        http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
+        http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+
+    <title>Introduction</title>
+    
+    <para>The key parts on which the Panifex Platform is based on are OSGI and ZK framework.</para>
+    
+    <para>
+        <emphasis>OSGI framework</emphasis> is a module system and service platform for Java 
+        programming language which enables a dynamic and wholesome model for components. Its main 
+        feature is the <emphasis role="bold">needlessness of rebooting</emphasis> while installing, 
+        starting, stopping, updating or uninstalling applications or components which, 
+        deployment-wise, come in the form of bundles. The mentioned main feature is possible due to 
+        APIs that allow remote downloading of management policies and enable the management of an 
+        application development. Bundles are, thus, enabled to detect the addition or removal of 
+        services, and to adapt accordingly.
+    </para>
+    
+    <para>
+        The latter key part of Panifex, <emphasis>ZK framework</emphasis>, is a Java-written open 
+        source Ajax Web application framework designed for easy writing of graphical user interfaces 
+        for Web applications. To put it briefly, it is a Java framework for building Web enterprise 
+        and mobile applications with little programming knowledge. 
+    </para>
+    
+    <xi:include href="cp01-sc01-getting_platform.xml" />
+    
+</chapter>

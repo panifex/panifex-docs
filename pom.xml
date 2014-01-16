@@ -40,6 +40,7 @@
                     <execution>
                         <goals>
                             <goal>generate-pdf</goal>
+                            <goal>generate-html</goal>
                         </goals>
                         <phase>package</phase>
                     </execution>
@@ -61,6 +62,8 @@
                 <configuration>
                     <sourceDirectory>docs</sourceDirectory>
                     <targetDirectory>target/docs</targetDirectory>
+                    <chunkedOutput>true</chunkedOutput>
+                    <imgSrcPath>docs/</imgSrcPath>
                     <xincludeSupported>true</xincludeSupported>
                     <useExtensions>1</useExtensions>
                     <highlightSource>1</highlightSource>
@@ -70,6 +73,11 @@
                     <fop1Extensions>1</fop1Extensions>
                     <foCustomization>${basedir}/conf/customization-fopdf.xsl</foCustomization>
                     <includes>manual.xml</includes>
+                    <postProcess>
+                        <copy todir="target/docs/manual/docs/">
+                            <fileset dir="docs/docs"/>
+                        </copy>
+                    </postProcess>
                 </configuration>
             </plugin>
         </plugins>

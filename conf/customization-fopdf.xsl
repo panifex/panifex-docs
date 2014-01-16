@@ -32,6 +32,9 @@
 
     <!-- No intendation of Titles -->
     <xsl:param name="title.margin.left">0pc</xsl:param>
+    
+    <!-- No intendation of Body -->
+    <xsl:param name="body.start.indent">0pt</xsl:param>
 
     <!--###################################################
                   Fonts & Styles
