@@ -50,5 +50,6 @@
     </para>
     
     <xi:include href="cp01-sc01-getting_platform.xml" />
+    <xi:include href="cp01-sc02-implementing_own_module.xml" />
     
 </chapter>

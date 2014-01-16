@@ -103,4 +103,8 @@ Password: admin
             </mediaobject>
         </figure>
     </para>
+    
+    <para>
+        The next step is creating an own module which extends the empty platform installation.
+    </para>
 </section>
