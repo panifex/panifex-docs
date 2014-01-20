@@ -27,7 +27,7 @@
         http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
         http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
 
-    <title>Getting platform</title>
+    <title>Getting the platform</title>
     
     <para>
         To download the Panifex Platform, simply follow the link: <uri>http://www.panifex.org/downloads</uri>
@@ -47,10 +47,10 @@
     </para>
 
     <para>
-        First we need to configure access to the database, which is done by modifying 
+        Firstly, configure the access to the database, which is done by modifying 
         <emphasis>conf/services/org.panifex.datasource.postgresql.properties</emphasis> in case of 
-        <emphasis>PostgreSQL</emphasis>. In case of <emphasis>Microsoft SQL Server</emphasis>, we 
-        need to modify <emphasis>conf/services/org.panifex.datasource.mssql.properties</emphasis>
+        <emphasis>PostgreSQL</emphasis>. In case of <emphasis>Microsoft SQL Server</emphasis>, 
+        simply modify <emphasis>conf/services/org.panifex.datasource.mssql.properties</emphasis>
         file.The key parameters to change here are: 
     
         <programlisting>
@@ -69,7 +69,7 @@ password=1234        # The connection password
     <para>
         The <emphasis>bin</emphasis> folder contains scripts for running applications. Windows users 
         will run <emphasis>start.bat</emphasis>, while Linux or MacOS users run <emphasis>start.sh</emphasis>.
-        Now we can run the application (using start.sh or start.bat). After starting, the platform 
+        Now it is possible to run the application (using start.sh or start.bat). After starting, the platform 
         is initially run here, where it is recommended to sign in. 
    
         <figure>
@@ -90,9 +90,9 @@ Username: admin
 Password: admin
         </programlisting>
 
-        After this has been inserted, the application demands us to change the initial password. 
-        When the password is changed, we will see the empty content of the application we want to 
-        create or modify.
+        After this has been inserted, the application demands a changing of the initial password. 
+        When the password is changed, a screen will appear and show the empty content of the 
+        application we want to create or modify.
         
         <figure>
             <title>The empty content of the application</title>
@@ -105,6 +105,6 @@ Password: admin
     </para>
     
     <para>
-        The next step is creating an own module which extends the empty platform installation.
+        The next step consists of creating an own module which extends the empty platform installation.
     </para>
 </section>

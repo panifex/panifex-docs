@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Panifex platform
+  Copyright (C) 2013  Mario Krizmanic
+  
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or any later version.
+  
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+<section version="5.0"
+        xmlns="http://docbook.org/ns/docbook"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="
+        http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd
+        http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
+        http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+
+    <title>Configuring Maven project</title>
+    
+        
+    <para>
+        Here we select <emphasis>Create a new project</emphasis> which will lead us to the next screen:
+        
+        <figure>
+            <title>Creating a Maven project - step 2</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="?"  scalefit="1" width="100%" contentdepth="100%" />
+                </imageobject>
+            </mediaobject>
+        </figure>
+    </para>
+    
+    <para>
+    Insert the following information in this window:
+    
+    <programlisting>
+    Group Id: org.panifex
+    Artifact Id: panifex-samples
+    Packaging: pom
+    Name: panifex-samples
+    </programlisting>
+    
+    In the <emphasis>Parent Project</emphasis> section, type in:
+    
+    <programlisting>
+    Group Id: org.panifex.parent.build
+    Artifact Id: compiled-bundle-settings
+    Version: 0.1.0-SNAPSHOT 
+    </programlisting>
+    
+    After clicking <emphasis>Finish</emphasis>, our project will be created.
+    
+    </para>
+        
