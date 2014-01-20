@@ -27,12 +27,11 @@
         http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
         http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
 
-    <title>Configuring Maven project</title>
+    <title>Creating Salutation Service interface</title>
     
-        
     <para>
-        Here we select <emphasis>Create a new project</emphasis> which will lead us to the next screen:
-        
+    The next step to take is to create a SalutationService interface.
+            
         <figure>
             <title>Creating a Maven project - step 2</title>
             <mediaobject>
@@ -41,27 +40,14 @@
                 </imageobject>
             </mediaobject>
         </figure>
-    </para>
-    
-    <para>
-    Insert the following information in this window:
+        
+    As seen from the picture, fill in the following blanks as such:
     
     <programlisting>
-    Group Id: org.panifex
-    Artifact Id: panifex-samples
-    Packaging: pom
-    Name: panifex-samples
+    Package: org.panifex.salute.spi 
+    Name: SalutationService  
     </programlisting>
-    
-    In the <emphasis>Parent Project</emphasis> section, type in:
-    
-    <programlisting>
-    Group Id: org.panifex.parent.build
-    Artifact Id: compiled-bundle-settings
-    Version: 0.1.0-SNAPSHOT 
-    </programlisting>
-    
-    After clicking <emphasis>Finish</emphasis>, our project will be created.
-    
+    The interface will be later implemented by other bundles.
     </para>
-  </section>      
+    
+  </section>
