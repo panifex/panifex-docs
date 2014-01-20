@@ -34,33 +34,33 @@
     
     <programlisting>
     
-    Bundle-Blueprint-Annotation: true<footnote>Because this value is set to true, 
+    Bundle-Blueprint-Annotation: true<footnote><para>Because this value is set to true,
     the blueprint annotation service will attempt to scan the bundle 
-    for blueprint annotations.</footnote>
+    for blueprint annotations.</para></footnote>
     
     Export-Package: \ 
-    org.panifex.salute.spi;version="1.0"<footnote>
+    org.panifex.salute.spi;version="1.0"<footnote><para>
     Enables the classes and interfaces from org.panifex.salute.spi package 
-    to become visible to other bundles.</footnote>
+    to become visible to other bundles.</para></footnote>
    
     Import-Package: \ 
-    org.apache.aries.blueprint.annotation;version="[1.0, 2.0)", \<footnote>
-    Defines that our module may use annotations from that package.</footnote>
-    org.panifex.module.api.content;version="[1.0,2.0)", \<footnote>
-    Enables the usage of classes from panifexmodule-api bundle</footnote>
+    org.apache.aries.blueprint.annotation;version="[1.0, 2.0)", \<footnote><para>
+    Defines that our module may use annotations from that package.</para></footnote>
+    org.panifex.module.api.content;version="[1.0,2.0)", \<footnote><para>
+    Enables the usage of classes from panifexmodule-api bundle</para></footnote>
     org.panifex.module.api.menu;version="[1.0,2.0)", \
     org.zkoss.bind;version="[7.0,8.0)", \
     org.zkoss.bind.annotation;version="[7.0,8.0)", \
     org.zkoss.mesg;version="[7.0,8.0)", \ 
     org.zkoss.zk.ui;version="[7.0,8.0)", \ 
-    org.zkoss.zk.ui.event;version="[7.0,8.0)", \<footnote>
-    Enables the usage of classes from panifex-module-api bundle</footnote>
-    org.zkoss.zul;version="[7.0,8.0)"<footnote>
-    Enables the usage of zkoss framework functionalities in our bundle.</footnote> 
+    org.zkoss.zk.ui.event;version="[7.0,8.0)", \<footnote><para>
+    Enables the usage of classes from panifex-module-api bundle</para></footnote>
+    org.zkoss.zul;version="[7.0,8.0)"<footnote><para>
+    Enables the usage of zkoss framework functionalities in our bundle.</para></footnote> 
     
-    Private-Package: org.panifex.salute.spi.<footnote>
-    A Private-Package is similar to Export-Package in every way, 
-    but it signifies which packages will not be exported by the bundle.</footnote>
+    Private-Package: org.panifex.salute.spi.
+    <footnote><para>A Private-Package is similar to Export-Package in every way, 
+    but it signifies which packages will not be exported by the bundle.</para></footnote>
     </programlisting>
     </para>
     

@@ -34,11 +34,9 @@
     (the defining file of this project):
     
     <programlisting>
-    
-    <properties> 
+    <properties>
         <bundle.symbolicName>panifex-samples-salute-spi</bundle.symbolicName> 
-    </properties> 
-
+    </properties>
     <dependencies> 
         <dependency> 
                 <groupId>org.panifex</groupId> 

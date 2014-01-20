@@ -37,7 +37,7 @@
             <title>Creating a Maven project - step 2</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="?"  scalefit="1" width="100%" contentdepth="100%" />
+                    <imagedata fileref="img04-create_maven_project_1.png"  scalefit="1" width="100%" contentdepth="100%" />
                 </imageobject>
             </mediaobject>
         </figure>
