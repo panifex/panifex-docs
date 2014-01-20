@@ -1,49 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Panifex platform
-  Copyright (C) 2013  Mario Krizmanic
-  
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or any later version.
-  
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
-  
-  You should have received a copy of the GNU Lesser General Public
-  License along with this library; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
--->
-<section version="5.0"
-        xmlns="http://docbook.org/ns/docbook"
-        xmlns:xi="http://www.w3.org/2001/XInclude"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xsi:schemaLocation="
+<!-- Panifex platform Copyright (C) 2013 Mario Krizmanic This library is 
+	free software; you can redistribute it and/or modify it under the terms of 
+	the GNU Lesser General Public License as published by the Free Software Foundation; 
+	either version 2.1 of the License, or any later version. This library is 
+	distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+	PURPOSE. See the GNU Lesser General Public License for more details. You 
+	should have received a copy of the GNU Lesser General Public License along 
+	with this library; if not, write to the Free Software Foundation, Inc., 51 
+	Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA -->
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
         http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd
         http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
         http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
 
-    <title>Inserting code in pom.xml</title>
-    
-    <para>
-    Now it is necessary to insert the following code in the <emphasis>pom.xml</emphasis>
-    (the defining file of this project):
-    
-    <programlisting>
-    <properties>
-        <bundle.symbolicName>panifex-samples-salute-spi</bundle.symbolicName> 
-    </properties>
-    <dependencies> 
-        <dependency> 
-                <groupId>org.panifex</groupId> 
-                <artifactId>panifex-module-api</artifactId> 
-        </dependency> 
-    </dependencies> 
-    </programlisting>
-    </para>
-    
+	<title>Inserting code in pom.xml</title>
+
+	<para>
+		Now it is necessary to insert the following code in the
+		<emphasis>pom.xml</emphasis>
+		(the defining file of this project):
+
+		<programlisting>
+			<properties>
+				<bundle.symbolicName>panifex-samples-salute-spi</bundle.symbolicName>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.panifex</groupId>
+					<artifactId>panifex-module-api</artifactId>
+				</dependency>
+			</dependencies>
+		</programlisting>
+	</para>
+
 </section>
