@@ -24,18 +24,17 @@
 		A
 		<emphasis>bundle</emphasis>
 		is a normal jar component with extra manifest headers,
-		while a module defines the dependencies on how a bundle imports and exports
+		while a module
+		defines the dependencies on how a bundle imports and exports
 		the code.
 		At the same time, this module will be the base for any further and
-		future expanding.
-		Again, we select
-		<emphasis>File-New-Project</emphasis>
-		, but now choose
-		<emphasis>maven module</emphasis>
-		.
+		future expanding. Again, we select
+		<emphasis>File-New-Project</emphasis>, but now choose
+		<emphasis>maven module</emphasis>.
+		
 
 		<figure>
-			<title>Creating a bundle - step 1</title>
+			<title>Creating a Maven project - step 1</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="img04-create_maven_project_1.png"
@@ -51,11 +50,11 @@
 
 		<programlisting>
 			Module Name: panifex-samples-salute-spi
-			Parent Project: panifex-samples
+			Parent Project:	panifex-samples
 		</programlisting>
 
 		<figure>
-			<title>Creating a bundle - step 2</title>
+			<title>Creating a Maven project - step 1</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="img04-create_maven_project_1.png"
@@ -67,8 +66,7 @@
 	</para>
 
 	<para>
-		After clicking
-		<emphasis>Next</emphasis>
+		After clicking <emphasis>Next</emphasis>
 		we should get this screen:
 
 		<figure>
@@ -89,4 +87,8 @@
 		</programlisting>
 	</para>
 
+	<xi:include href="cp02-sc01-inserting_code_in_pom.xml" />
+	<xi:include href="cp02-sc02-creating_osgi_file.xml" />
+	<xi:include href="cp02-sc03-creating_saluteservice_interface.xml" />
+	<xi:include href="cp02-sc04-defining_salutation_manager.xml" />
 </chapter>

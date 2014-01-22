@@ -20,10 +20,12 @@
 	<title>Defining SalutationManager</title>
 
 	<para>
-		We now need to define SalutationManager, which is done by creating a
-		new Java class as such:
+		We now need to define SalutationManager, which is done by
+		creating a new Java class as such:
+		
+		
 		<figure>
-			<title>Creating a bundle - step 1</title>
+			<title>Creating a Maven project - step 1</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="img04-create_maven_project_1.png"
@@ -31,64 +33,76 @@
 				</imageobject>
 			</mediaobject>
 		</figure>
+		
 	</para>
 
 	<para>
 		Here it is necessary to insert:
 		<programlisting>
 			Package: org.panifex.salute.spi.impl
-			Name:
-			SalutationManager
+			Name: SalutationManager
 		</programlisting>
+
 		This Manager will dynamically subscribe to implementations of
 		SalutationService, and is a singleton which means there will be
-		only
-		one active instance because the information about currently
-		active
-		implementations
-		will be given only from a single place. The code is as
-		follows:
+		only one active instance because the information about currently
+		active implementations will be given only from a single place. 
+		The code is as follows:
+
 		<programlisting>
-			* setting up singleton:
+			*setting up singleton:
+			
 			private static SalutationManager manager;
-			public static SalutationManager init() {
+			public static
+			SalutationManager init() {
 			if (manager == null) {
-			manager = new SalutationManager();
+			manager = new
+			SalutationManager();
 			}
 			return manager;
 			}
-			* defining
-			subscription to SalutationService :
+			
+		</programlisting>
 
+		<programlisting>
+			<![CDATA[
+			* defining subscription to SalutationService:
+			
 			@Inject
 			@ReferenceList(
 			availability = "optional",
-			serviceInterface = SalutationService.class,
-			referenceListeners = @ReferenceListener(ref = "salutationManager"))
+			serviceInterface =
+			SalutationService.class,
+			referenceListeners = @ReferenceListener(ref =
+			"salutationManager"))
 			private List
 			<SalutationService>
 				salutationServices = new ArrayList<>();
-
 				@Bind
 				public void
 				bind(SalutationService salutationService) {
-				if (salutationService !=
+				if
+				(salutationService !=
 				null) {
 				salutationServices.add(salutationService);
 				}
 				}
 				@Unbind
 				public
-				void unbind(SalutationService salutationService) {
+				void
+				unbind(SalutationService salutationService) {
 				if
-				(salutationService != null) {
+				(salutationService !=
+				null) {
 				salutationServices.remove(salutationService);
 				}
 				}
-				* setting up a static
-				method which provides a list of currently
-				active salutation service
-				implementations
+				]]>
+			</programlisting>
+			<programlisting>
+				* setting up a static method which provides a list of currently
+				active salutation service implementations
+				<![CDATA[
 
 				public static List
 				<SalutationService>
@@ -96,9 +110,12 @@
 					return
 					init().salutationServices;
 					}
-					* what is
-					left is to annotate the
-					salutationManager
+				]]>
+			</programlisting>
+			<programlisting>
+				* what is left is to annotate the SalutationManager
+				
+
 					@Bean
 					<footnote>
 						<para>By this annotation we annotate a bean. The bean id might be
@@ -114,9 +131,10 @@
 					</footnote>
 					public class SalutationManager {
 					..
-					}
+					}<![CDATA[
 				</SalutationService>
 			</SalutationService>
+			]]>
 		</programlisting>
 	</para>
 </section>

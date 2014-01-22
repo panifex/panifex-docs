@@ -23,7 +23,7 @@
 		The next step to take is to create a SalutationService interface.
 
 		<figure>
-			<title>Creating a Maven project - step 2</title>
+			<title>Creating a Maven project - step 1</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="img04-create_maven_project_1.png"
@@ -43,12 +43,12 @@
 
 	<para>
 		The next thing to do is to insert the content of the
-		SalutationService,
-		which is done using the following code:
+		SalutationService, which is done using the following code:
 		<programlisting>
 			public interface SalutationService {
 
-			String salutationName();
+			String
+			salutationName();
 
 			String salute(String name);
 			}

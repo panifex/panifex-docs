@@ -18,9 +18,7 @@
         http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
 
 	<title>
-		Inserting link in
-		<emphasis>pom.xml</emphasis>
-		file
+		Insert link in <emphasis>pom.xml</emphasis>	file
 	</title>
 
 	<para>
@@ -29,14 +27,15 @@
 		file.
 		This we do by opening the file and inputting the following:
 		<programlisting>
-
-			<repositories>
+		<![CDATA[
+		<repositories>
 				<repository>
 					<id>panifex</id>
 					<url>http://www.panifex.org/maven</url>
 				</repository>
 			</repositories>
-
+]]>
+			
 		</programlisting>
 	</para>
 

@@ -21,16 +21,16 @@
 
 	<para>
 		Now click
-		<emphasis>File-New</emphasis>
-		in order to create a osgi.bnd file with the following content:
+		<emphasis>File->New</emphasis> in order to create a osgi.bnd file 
+		with the following content:
 
 		<programlisting>
 
 			Bundle-Blueprint-Annotation: true
 			<footnote>
-				<para>Because this value is set to true,
-					the blueprint annotation service will attempt to scan the bundle
-					for blueprint annotations.
+				<para>
+				Because this value is set to true, the blueprint annotation service will 
+				attempt to scan the bundle for blueprint annotations.
 				</para>
 			</footnote>
 
@@ -38,8 +38,7 @@
 			org.panifex.salute.spi;version="1.0"
 			<footnote>
 				<para>
-					Enables the classes and interfaces from org.panifex.salute.spi package
-					to become visible to other bundles.
+					Enables the classes and interfaces from org.panifex.salute.spi package to become visible to other bundles.
 				</para>
 			</footnote>
 
@@ -61,25 +60,13 @@
 			org.zkoss.bind.annotation;version="[7.0,8.0)", \
 			org.zkoss.mesg;version="[7.0,8.0)", \
 			org.zkoss.zk.ui;version="[7.0,8.0)", \
-			org.zkoss.zk.ui.event;version="[7.0,8.0)", \
-			<footnote>
-				<para>
-					Enables the usage of classes from panifex-module-api bundle
-				</para>
-			</footnote>
-			org.zkoss.zul;version="[7.0,8.0)"
-			<footnote>
-				<para>
-					Enables the usage of zkoss framework functionalities in our bundle.
-				</para>
-			</footnote>
+			org.zkoss.zk.ui.event;version="[7.0,8.0)", \<footnote><para>
+					Enables the usage of classes from panifex-module-api bundle	</para></footnote>
+			org.zkoss.zul;version="[7.0,8.0)"<footnote><para>
+					Enables the usage of zkoss framework functionalities in our bundle.</para></footnote>
 
-			Private-Package: org.panifex.salute.spi.
-			<footnote>
-				<para>A Private-Package is similar to Export-Package in every way,
-					but it signifies which packages will not be exported by the bundle.
-				</para>
-			</footnote>
+			Private-Package: org.panifex.salute.spi.<footnote><para>
+					A Private-Package is similar to Export-Package in every way, but it signifies which packages will not be exported by the bundle.</para></footnote>
 		</programlisting>
 	</para>
 

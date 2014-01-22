@@ -21,10 +21,10 @@
 
 	<para>
 		Now it is necessary to insert the following code in the
-		<emphasis>pom.xml</emphasis>
-		(the defining file of this project):
+		<emphasis>pom.xml</emphasis> (the defining file of this project):
 
 		<programlisting>
+			<![CDATA[
 			<properties>
 				<bundle.symbolicName>panifex-samples-salute-spi</bundle.symbolicName>
 			</properties>
@@ -34,6 +34,8 @@
 					<artifactId>panifex-module-api</artifactId>
 				</dependency>
 			</dependencies>
+			]]>
+
 		</programlisting>
 	</para>
 
