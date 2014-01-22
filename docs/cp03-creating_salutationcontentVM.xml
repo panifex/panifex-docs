@@ -48,8 +48,8 @@
 	</para>
 
 	<para>
-		Now we define our SalutationContentVM, which is done inserting the
-		following code:
+		At this stage the next thing to do is to define SalutationContentVM, which is done 
+		inserting the following code:
 		<programlisting>
 			* defining getters and setters for Name
 			<![CDATA[

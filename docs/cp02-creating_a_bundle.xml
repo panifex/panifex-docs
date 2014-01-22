@@ -29,7 +29,7 @@
 		the code.
 		At the same time, this module will be the base for any further and
 		future expanding. Again, we select
-		<emphasis>File-New-Project</emphasis>, but now choose
+		<emphasis>File -> New -> Project</emphasis>, but now choose
 		<emphasis>maven module</emphasis>.
 		
 
@@ -45,8 +45,7 @@
 	</para>
 
 	<para>
-		Now we should get the following screen, which we will fill in such a
-		manner:
+		Now the following screen should appear. Once here, type in the next lines:
 
 		<programlisting>
 			Module Name: panifex-samples-salute-spi
@@ -66,8 +65,7 @@
 	</para>
 
 	<para>
-		After clicking <emphasis>Next</emphasis>
-		we should get this screen:
+		Clicking <emphasis>Next</emphasis> should result in such a screen:
 
 		<figure>
 			<title>Creating a bundle - step 1</title>

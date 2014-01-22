@@ -25,16 +25,16 @@
 		The next thing to do is to insert the link into the defining
 		<emphasis>pom.xml</emphasis>
 		file.
-		This we do by opening the file and inputting the following:
+		This is done by opening the file and inputting the following:
 		<programlisting>
 		<![CDATA[
 		<repositories>
-				<repository>
-					<id>panifex</id>
-					<url>http://www.panifex.org/maven</url>
-				</repository>
-			</repositories>
-]]>
+			<repository>
+				<id>panifex</id>
+				<url>http://www.panifex.org/maven</url>
+			</repository>
+		</repositories>
+		]]>
 			
 		</programlisting>
 	</para>

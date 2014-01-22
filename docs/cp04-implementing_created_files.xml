@@ -32,7 +32,7 @@
 			</mediaobject>
 		</figure>
 	
-	This is what should inserted here:
+	This is what should be inserted here:
 	<programlisting> 
 	Name: SayHelloSalutation
 	Package: org.panifex.salute.hello
@@ -62,7 +62,7 @@
 	* adding annotation
 
 	@Bean(id = "sayHelloSalutation") 
-	<footnote><para>This time we expose SalutationService</para></footnote>@Service(interfaces = SalutationService.class) 
+	<footnote><para>This time the SalutationService is exposed</para></footnote>@Service(interfaces = SalutationService.class) 
 	public class SayHelloSalutation implements SalutationService { 
 	.. 
 	} 

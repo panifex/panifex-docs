@@ -30,7 +30,7 @@
     <title>Implementing an own module</title>
     
     <para>
-        Let us now see how to program our own module which extends the empty platform installation. 
+        This section will show how to program your own module which extends the empty platform installation. 
         This example has already been done and is available <uri>https://github.com/panifex/panifex-samples</uri>. 
         How to run the module will be shown later, as well as what has to be installed to do that. 
         There are a few postulates needed to create a module:
@@ -44,7 +44,7 @@
     
     
     <para>
-        After running Eclipse, we will create a new project which is done selecting 
+        After running Eclipse, create a new project which by selecting 
         <emphasis>File -> New -> Project</emphasis>:
         
         <figure>
@@ -58,8 +58,8 @@
     </para>
     
     <para>
-        Here it is vital to select Maven project. When we click next, we should get the following 
-        screen:
+        Here simply select <emphasis>Maven project</emphasis>. After clicking <emphasis>next</emphasis>, 
+        the following screen should appear:
         
         <figure>
             <title>Creating a Maven Project - step 2</title>

@@ -20,7 +20,7 @@
 	<title>To-do list</title>
 
 	<para>
-	On the to-do list there are these tasks:
+	On the to-do list are these tasks:
 	<itemizedlist>
 	<listitem override='bullet'>
       <para>Implementing support for further widgets

@@ -66,7 +66,7 @@
     </properties> 
 	]]>
 	  
-	* then we define interdependency to the panifex-samples-salute-spi bundle (module) 
+	* define interdependency to the panifex-samples-salute-spi bundle (module) 
 	<![CDATA[
     <dependencies> 
         <dependency> 
@@ -90,7 +90,7 @@
 
 	Import-Package: \ 
     org.apache.aries.blueprint.annotation;version="[1.0, 2.0)", \ 
-    <footnote><para>With this line we make a SalutationService interface import 
+    <footnote><para>With this line a SalutationService interface import is being made 
     from the panifex-samples-salute-spi module.</para></footnote>org.panifex.salute.spi;version="[1.0, 2.0)" 
 
 	Private-Package: org.panifex.salute.hello.* 

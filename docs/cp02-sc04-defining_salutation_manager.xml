@@ -20,7 +20,7 @@
 	<title>Defining SalutationManager</title>
 
 	<para>
-		We now need to define SalutationManager, which is done by
+		What follows is the SalutationManager defining, which is done by
 		creating a new Java class as such:
 		
 		

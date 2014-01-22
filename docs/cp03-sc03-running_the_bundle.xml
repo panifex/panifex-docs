@@ -66,8 +66,8 @@
 			</mediaobject>
 		</figure>
 		
-	If all has been installed properly, when we refresh the application we should see a menu and, 
-	after clicking on it, we should see the defined context.
+	If all has been installed properly, when the application is refreshed a menu will appear, 
+	and after clicking on it, the defined context.
 	
 				
 		<figure>
@@ -80,9 +80,8 @@
 			</mediaobject>
 		</figure>
 		
-	The Salutation combobox is here still empty due to the reason that we have not yet defined 
-	a single salutation-service implementation.
-	
+	The Salutation combobox is here still empty due to the reason that not 
+	a single salutation-service implementation has been defined.
 	</para>
 	
 </section>

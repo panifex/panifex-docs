@@ -37,7 +37,7 @@
 	
 	The vital information to insert here is:
 	<programlisting>
-	Package: org,panifex.salute.spi.impl
+	Package: org.panifex.salute.spi.impl
 	Name: SalutationContent
 	Superclass: org.panifex.module.api.content.AbstractContent
 	</programlisting>

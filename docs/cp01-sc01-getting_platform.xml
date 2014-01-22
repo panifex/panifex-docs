@@ -51,7 +51,7 @@
 		simply modify
 		<emphasis>conf/services/org.panifex.datasource.mssql.properties
 		</emphasis>
-		file.The key parameters to change here are:
+		file. The key parameters to change here are:
 
 		<programlisting>
 			url=jdbc:postgresql://localhost:5432/panifexdb
@@ -106,7 +106,7 @@
 		the initial password.
 		When the password is changed, a screen will appear and show the empty
 		content of the
-		application we want to create or modify.
+		application which will be created or modified by the user.
 
 		<figure>
 			<title>The empty content of the application</title>
