@@ -65,9 +65,8 @@
 			this.name = name;
 			}
 			]]>
-			* defining getters and setters for selected
+			* defining getters and setters for selected salutation service
 			<![CDATA[
-			salutation service
 
 			private SalutationService selectedService;
 
@@ -99,7 +98,7 @@
 				public void salute() {
 				Messagebox.show(selectedService.salute(name));
 				}
-			</SalutationService>
+			
 			]]>
 			
 		</programlisting>

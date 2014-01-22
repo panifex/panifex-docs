@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Panifex platform Copyright (C) 2013 Mario Krizmanic This library is 
+	free software; you can redistribute it and/or modify it under the terms of 
+	the GNU Lesser General Public License as published by the Free Software Foundation; 
+	either version 2.1 of the License, or any later version. This library is 
+	distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+	PURPOSE. See the GNU Lesser General Public License for more details. You 
+	should have received a copy of the GNU Lesser General Public License along 
+	with this library; if not, write to the Free Software Foundation, Inc., 51 
+	Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA -->
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd
+        http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
+        http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+
+	<title>Defining SalutationContent</title>
+	
+	<para>
+	What needs to be done now is to define the SalutationContent 
+	which will determine the content of the screen and connect 
+	the screen components with the SalutationContentVM.
+	
+			
+		<figure>
+			<title>Creating a Maven project - step 1</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="img04-create_maven_project_1.png"
+						scalefit="1" width="100%" contentdepth="100%" />
+				</imageobject>
+			</mediaobject>
+		</figure>
+	
+	The vital information to insert here is:
+	<programlisting>
+	Package: org,panifex.salute.spi.impl
+	Name: SalutationContent
+	Superclass: org.panifex.module.api.content.AbstractContent
+	</programlisting>
+	
+	</para>
+
+	<para>
+	What follows now is to program the SalutationContent:
+	<programlisting>
+	* defining the constructor which determines the content title and identifier  
+    
+	public SalutationContent() { 
+        super("Salutation", "salutation"); 
+    } 
+	
+	</programlisting>
+	
+	<programlisting>
+	* defining methods which the DefaultBinder instantiates (The binder acts like a broker 
+	and is responsible for the communication between View and ViewModel) which is followed 
+	by defining the creation of components 
+	
+    @Override 
+    public Component createBody() { 
+        Div body = new Div(); 
+        
+        DefaultBinder binder = new DefaultBinder(); 
+        binder.init(body, new SalutationContentVM(), null); 
+        
+        body.setAttribute("vm", binder.getViewModel()); 
+        
+        createComponents(binder, body); 
+        
+        binder.loadComponent(body, true); 
+        
+        return body; 
+    }    
+	
+	</programlisting>
+	
+	<programlisting>
+	* further creating of components
+	(Combobox – selecting the salute
+	Textbox  - name input 
+	Button – running the salute)
+
+    private void createComponents(DefaultBinder binder, Component body) { 
+        Vlayout vlayout = new Vlayout(); 
+        body.appendChild(vlayout); 
+        
+        createSalutationChooserArea(binder, vlayout); 
+        
+        createInputNameArea(binder, vlayout); 
+        
+        createButtonArea(binder, vlayout); 
+    } 
+    private void createButtonArea(DefaultBinder binder, Vlayout vlayout) { 
+        // button 
+        Button saluteButton = new Button("Salute"); 
+        vlayout.appendChild(saluteButton); 
+        
+        // bind command 
+        binder.addCommandBinding(saluteButton, Events.ON_CLICK, "'salute'", null); 
+        
+        // bind disabled 
+        binder.addPropertyLoadBindings(saluteButton, "disabled", "empty vm.selectedService", null, null, null, null, null); 
+    } 
+    
+    private void createInputNameArea(DefaultBinder binder, Vlayout vlayout) { 
+        Hlayout hlayout = new Hlayout(); 
+        vlayout.appendChild(hlayout); 
+        
+        // label 
+        Label nameLabel = new Label("Your name :"); 
+        hlayout.appendChild(nameLabel); 
+        
+        // text box 
+        Textbox nameTextbox = new Textbox(); 
+        hlayout.appendChild(nameTextbox); 
+        
+        // bind name 
+        binder.addPropertyLoadBindings(nameTextbox, "value", "vm.name", null, null, null, null, null); 
+        binder.addPropertySaveBindings(nameTextbox, "value", "vm.name", null, null, null, null, null, null, null); 
+    } 
+    
+    private void createSalutationChooserArea(DefaultBinder binder, Vlayout vlayout) { 
+        Hlayout hlayout = new Hlayout(); 
+        vlayout.appendChild(hlayout); 
+        
+        // label 
+        Label chooseSalutionLabel = new Label("Salutation :"); 
+        hlayout.appendChild(chooseSalutionLabel); 
+        
+        // combobox 
+        Combobox salutationCombo = new Combobox(); 
+        hlayout.appendChild(salutationCombo); 
+        
+        // bind model 
+        binder.addPropertyLoadBindings(salutationCombo, "model", "vm.salutationServices", null, null, null, null, null); 
+        
+        // bind selected item 
+        binder.addPropertyLoadBindings(salutationCombo, "selectedItem", "vm.selectedService", null, null, null, null, null); 
+        binder.addPropertySaveBindings(salutationCombo, "selectedItem", "vm.selectedService", null, null, null, null, null, null, null); 
+    } 
+	
+	</programlisting>
+	
+	<programlisting>
+	* Annotating a complete class 
+
+	<footnote><para> Registers SalutationContent class as org.panifex.module.api.content. 
+	(that is, as the web application's content)</para></footnote>@Service(interfaces = Content.class)
+
+ 	* A content of the web application. 
+ 	* <![CDATA[<p>]]> 
+ 	* The content is shown in the center of the application's GUI. 
+
+
+	@Bean(id = "salutationContent") 
+	@Service(interfaces = Content.class) 
+	public class SalutationContent extends AbstractContent { 
+	... 
+	}
+	
+	</programlisting>
+	</para>
+	
+</section>
