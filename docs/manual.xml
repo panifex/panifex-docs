@@ -43,4 +43,5 @@
     <xi:include href="cp01-introduction.xml" />
     <xi:include href="cp02-creating_a_bundle.xml" />
     <xi:include href="cp03-creating_salutationcontentVM.xml" />
+    <xi:include href="cp04-implementing_created_files.xml" />
 </book>

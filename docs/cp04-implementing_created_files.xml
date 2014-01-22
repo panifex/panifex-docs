@@ -67,7 +67,8 @@
 	.. 
 	} 
 	</programlisting>
-	
 	</para>
 	
+	<xi:include href="cp04-sc01-compiling_and_running.xml" />
+	<xi:include href="cp04-sc02-to_do_list.xml" />
 </chapter>

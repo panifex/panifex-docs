@@ -103,4 +103,10 @@
 			
 		</programlisting>
 	</para>
+	
+	<xi:include href="cp03-sc01-defining_SalutationContent.xml" />
+	<xi:include href="cp03-sc02-creating_SalutationMenuBinder.xml" />
+	<xi:include href="cp03-sc03-running_the_bundle.xml" />
+	<xi:include href="cp03-sc04-defining_SalutationService_implementation.xml" />
+	
 </chapter>
