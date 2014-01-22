@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Panifex platform Copyright (C) 2013 Mario Krizmanic This library is 
+	free software; you can redistribute it and/or modify it under the terms of 
+	the GNU Lesser General Public License as published by the Free Software Foundation; 
+	either version 2.1 of the License, or any later version. This library is 
+	distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+	PURPOSE. See the GNU Lesser General Public License for more details. You 
+	should have received a copy of the GNU Lesser General Public License along 
+	with this library; if not, write to the Free Software Foundation, Inc., 51 
+	Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA -->
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd
+        http://www.w3.org/2001/XInclude http://www.w3.org/2001/XInclude.xsd
+        http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+
+	<title>Defining SalutationService implementation</title>
+	
+	<para>
+	After running the bundle, return to Eclipse and create a new maven module.
+		
+		<figure>
+			<title>Creating a Maven project - step 1</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="img04-create_maven_project_1.png"
+						scalefit="1" width="100%" contentdepth="100%" />
+				</imageobject>
+			</mediaobject>
+		</figure>
+		
+	Once here, simply tick the Create a simple project (skip archetype selection) box and insert
+	<programlisting>
+	Module Name: panifex-samples-salute-hello  
+	</programlisting>
+	This should lead to a screen like this one:
+	
+		<figure>
+			<title>Creating a Maven project - step 1</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="img04-create_maven_project_1.png"
+						scalefit="1" width="100%" contentdepth="100%" />
+				</imageobject>
+			</mediaobject>
+		</figure>
+		
+	Here input 
+	<programlisting>
+	Name: panifex-samples-salute-hello
+	Packaging: bundle 
+	</programlisting>
+	and then click <emphasis>Finish</emphasis>.
+	</para>
+	
+	<para>
+	Now edit the pom.xml file again by inserting the following code:
+	<programlisting>
+	* define a symbolic name 
+	<![CDATA[
+    <properties> 
+        <bundle.symbolicName>panifex-samples-salute-hello</bundle.symbolicName> 
+    </properties> 
+	]]>
+	  
+	* then we define interdependency to the panifex-samples-salute-spi bundle (module) 
+	<![CDATA[
+    <dependencies> 
+        <dependency> 
+            <groupId>org.panifex</groupId> 
+            <artifactId>panifex-samples-salute-spi</artifactId> 
+            <version>0.1.0-SNAPSHOT</version> 
+        </dependency> 
+    </dependencies> 
+	]]>
+
+	</programlisting>
+	</para>
+	
+	<para>
+	Once the pom.xml file is edited, create its osgi.bnd:
+	
+	<programlisting>
+	Bundle-Blueprint-Annotation: true 
+
+	Export-Package: 
+
+	Import-Package: \ 
+    org.apache.aries.blueprint.annotation;version="[1.0, 2.0)", \ 
+    <footnote><para>With this line we make a SalutationService interface import 
+    from the panifex-samples-salute-spi module.</para></footnote>org.panifex.salute.spi;version="[1.0, 2.0)" 
+
+	Private-Package: org.panifex.salute.hello.* 
+	</programlisting>
+	</para>
+
+	
+</section>
